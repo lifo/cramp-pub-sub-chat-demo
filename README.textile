@@ -1,0 +1,16 @@
+h2. Cramp chat using Redis Pub/Sub + WebSockets
+
+This is a proof-of-concept application to showcase Cramp's integration with Redis Pub/Sub + WebSockets.
+
+h2. Running the application
+
+Make sure you have "Redis":http://redis.io/ up and running.
+
+$ bundle install
+$ bundle exec thin --timeout 0 start
+
+You should now see the application running at "http://0.0.0.0:3000":http://0.0.0.0:3000 
+
+h2. Credits
+
+This is an updated version of the Cramp application originally written by "Pieter Noordhuis":https://github.com/pietern - "https://gist.github.com/348262":https://gist.github.com/348262 
