@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'cramp'
+gem 'cramp', '~> 0.15'
 
 gem 'thin'
 gem 'http_router'
