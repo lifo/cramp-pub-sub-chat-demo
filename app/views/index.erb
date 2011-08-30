@@ -5,7 +5,7 @@
 <script src='http://datejs.googlecode.com/svn/trunk/build/date.js'></script>
 <script>
 $(document).ready(function(){
-  if (typeof WebSocket != 'undefined') {
+  if (typeof(WebSocket) != 'undefined' || typeof(MozWebSocket)) {
     $('#ask').show();
   } else {
     $('#error').show();
@@ -28,7 +28,9 @@ $(document).ready(function(){
 
   function join(name) {
     var host = window.location.host.split(':')[0];
-    var ws = new WebSocket('ws://<%= request.host_with_port %>/websocket');
+
+    var SocketKlass = "MozWebSocket" in window ? MozWebSocket : WebSocket;
+    var ws = new SocketKlass('ws://<%= request.host_with_port %>/websocket');
 
     var container = $('div#msgs');
     ws.onmessage = function(evt) {
