@@ -9,8 +9,8 @@ class ChatAction < Cramp::Websocket
   end
   
   def destroy_redis
-    @pub.close_connection_after_writing
-    @sub.close_connection_after_writing
+    @pub.close_connection
+    @sub.close_connection
   end
   
   def received_data(data)

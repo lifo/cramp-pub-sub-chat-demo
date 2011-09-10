@@ -6,5 +6,5 @@ gem 'thin'
 gem 'http_router'
 gem 'async-rack'
 
-gem 'em-hiredis'
+gem 'em-hiredis', :git => "git://github.com/mloughran/em-hiredis.git"
 gem 'yajl-ruby'
