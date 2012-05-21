@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'cramp', '~> 0.15.1'
+gem 'cramp', :git => "git://github.com/lifo/cramp.git"
 
 gem 'thin'
 gem 'http_router'
